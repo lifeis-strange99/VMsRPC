@@ -1,0 +1,58 @@
+# ==========================================
+# Discord VM Presence Master Configuration
+# ==========================================
+application_id: "YOUR_CLIENT_ID_HERE"
+update_interval: 15
+
+# ==========================================
+# Hypervisor Settings
+# ==========================================
+# enabled: true/false to monitor that software.
+# path: Command name or absolute path to the executable.
+hypervisors:
+  vmware:
+    enabled: true
+    path: "path"
+  virtualbox:
+    enabled: true
+    path: "path"
+  qemu:
+    enabled: true
+    path: "path"
+  parallels:
+    enabled: false # Standard for macOS virtualization
+    path: "path"
+
+# ==========================================
+# 1. Hardcoded VMs (High Priority)
+# ==========================================
+hardcoded:
+  "Name":
+    os: "os"
+    image_key: "image name"
+    hostname: "hostname
+  "Name":
+    os: "os"
+    image_key: "image name"
+    hostname: "hostname
+  "Name":
+    os: "os"
+    image_key: "image name"
+    hostname: "hostname
+
+# ==========================================
+# 2. Discovery Rules (Auto-Fallback)
+# ==========================================
+discovery_rules:
+  vmware:
+    enabled: true
+    default_image: "vmware-logo"
+  virtualbox:
+    enabled: true
+    default_image: "vbox-logo"
+  qemu:
+    enabled: true
+    default_image: "qemu-logo"
+  parallels:
+    enabled: true
+    default_image: "parallels-logo"

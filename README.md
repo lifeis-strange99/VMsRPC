@@ -1,5 +1,4 @@
 
-
 ---
 
 # VMsRPC (Virtual Machine Rich Presence)
@@ -17,21 +16,30 @@ VMsRPC is a modular, multi-hypervisor Discord Rich Presence tool that automatica
 ## Installation
 
 1. **Clone the repository:**
+
 ```bash
 git clone https://github.com/lifeis-strange99/VMsRPC.git
 cd VMsRPC
 
 ```
 
-
 2. **Install dependencies:**
+
 ```bash
 pip install -r requirements.txt
 
 ```
-- **If you get `ModuleNotFoundError: No module named 'tkinter'`, install Tkinter.**
+
+3. **Install Tkinter (if missing):**
+If you get `ModuleNotFoundError: No module named 'tkinter'`, install it using the method for your OS:
+* **Windows:** Rerun the Python installer, choose **Modify**, check **tcl/tk and IDLE**, and finish.
+* **Ubuntu / Debian / Mint:** `sudo apt update && sudo apt install python3-tk`
+* **Fedora / RHEL / CentOS:** `sudo dnf install python3-tkinter`
+* **Arch Linux:** `sudo pacman -S tk`
+* **macOS:** `brew install tcl-tk` (if using Homebrew Python)
 
 
+*Verify your installation by running: `python3 -m tkinter*`
 
 ## Configuration
 
@@ -43,9 +51,8 @@ When you run the script for the first time, `config.yaml` will be generated. Ope
 2. Create a **New Application**.
 3. Copy the **Application ID** from the "General Information" tab.
 4. Go to the **Rich Presence -> Art Assets** tab to upload your VM icons.
+
 * *Note: The "Image Key" you set in the portal must match the `image_key` defined in your `config.yaml`.*
-
-
 
 ### Example `config.yaml`
 

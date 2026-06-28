@@ -29,6 +29,7 @@ cd VMsRPC
 pip install -r requirements.txt
 
 ```
+**If you get `ModuleNotFoundError: No module named 'tkinter'`, install Tkinter.
 
 
 

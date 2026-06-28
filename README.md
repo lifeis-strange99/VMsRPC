@@ -33,7 +33,7 @@ pip install -r requirements.txt
 3. **Install Tkinter (if missing):**
 If you get `ModuleNotFoundError: No module named 'tkinter'`, install it using the method for your OS:
 * **Windows:** Rerun the Python installer, choose **Modify**, check **tcl/tk and IDLE**, and finish.
-* **Ubuntu / Debian / Mint:** `sudo apt update && sudo apt install python3-tk`
+* **Ubuntu / Debian / Mint:** `sudo apt install python3-tk`
 * **Fedora / RHEL / CentOS:** `sudo dnf install python3-tkinter`
 * **Arch Linux:** `sudo pacman -S tk`
 * **macOS:** `brew install tcl-tk` (if using Homebrew Python)

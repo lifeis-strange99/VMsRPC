@@ -1,4 +1,3 @@
-
 ---
 
 # VMsRPC (Virtual Machine Rich Presence)
@@ -11,7 +10,7 @@ VMsRPC is a modular, multi-hypervisor Discord Rich Presence tool that automatica
 * **Auto-Discovery:** Automatically detects new VMs without manual intervention.
 * **Hardcoded Overrides:** Define specific metadata (hostname, OS, icons) for your primary lab machines.
 * **Live Configuration:** Edit `config.yaml` while the script is running for instant updates.
-* **Cross-Platform:** Works on Windows and Linux. (MacOS is not tested)
+* **Cross-Platform:** Works on Windows and Linux. (macOS is not tested)
 
 ## Installation
 
@@ -32,18 +31,22 @@ pip install -r requirements.txt
 
 3. **Install Tkinter (if missing):**
 If you get `ModuleNotFoundError: No module named 'tkinter'`, install it using the method for your OS:
+
 * **Windows:** Rerun the Python installer, choose **Modify**, check **tcl/tk and IDLE**, and finish.
 * **Ubuntu / Debian / Mint:** `sudo apt install python3-tk`
 * **Fedora / RHEL / CentOS:** `sudo dnf install python3-tkinter`
 * **Arch Linux:** `sudo pacman -S tk`
 * **macOS:** `brew install tcl-tk` (if using Homebrew Python)
 
-
 *Verify your installation by running: `python3 -m tkinter*`
 
 ## Configuration
 
-When you run the script for the first time, `config.yaml` will be generated. Open this file to set your **Discord Application ID** and define paths for your hypervisor binaries.
+To set up the script, copy the provided example configuration file:
+
+1. Copy `config.example.yaml` and rename it to `config.yaml`.
+2. Open `config.yaml` and enter your **Discord Application ID**.
+3. Configure the `path` for your installed hypervisors (e.g., provide the path to `vmrun.exe` on Windows or ensure the command is in your system PATH for Linux).
 
 ### Discord Setup
 
